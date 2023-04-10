@@ -45,12 +45,3 @@ async def get_saldodiarioperiodo(data_inicial: date, data_final: date):
   connection.clone()
   return result
 
-
-"""@app.get('/saldo_diario')
-def endpoint_saldo_diario(inicio: date, fim: date):
-    c.execute("SELECT * FROM saldo_diario WHERE data >= ? AND data <= ?", (inicio, fim))
-    rows = c.fetchall()
-    if len(rows) == 0:
-        raise HTTPException(status_code=404, detail="Não há registros de saldo diário para o período especificado")
-    saldo_diario = [{'data': row[1], 'saldo_inicial': row[2], 'saldo_final': row[3]} for row in rows]
-    return saldo_diario"""
